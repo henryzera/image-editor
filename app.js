@@ -1,5 +1,6 @@
 const sharp = require('sharp');
 const compress_images = require('compress-images');
+const fs = require('fs')
 
 let path = process.argv[2];
 let width = Number(process.argv[3]);
@@ -33,7 +34,17 @@ function compress(pathInput, outputPath) {
       console.log('Concluído:', completed);
       console.log('Estatísticas:', statistic);
       console.log('-------------');
+
+      fs.unlink(pathInput, (err)=>{
+        if(err){
+            console.log(err)
+        }
+        else{
+            console.log(pathInput, " apagado")
+        }
+    })
     }
+
   );
 }
 
