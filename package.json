@@ -9,6 +9,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "gifsicle": "^5.2.1",
+    "pngquant-bin": "^6.0.1",
     "sharp": "^0.34.1"
+  },
+  "devDependencies": {
+    "compress-images": "^2.0.5"
   }
 }
